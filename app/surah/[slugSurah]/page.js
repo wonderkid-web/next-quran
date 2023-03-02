@@ -10,9 +10,10 @@ export default async function Surah({ params }) {
   // console.log(arraySurah.data.ayat)
   return (
     <div className="flex flex-col w-4/5 m-5 lg:w-1/2 mx-auto mt-10 gap-3">
-      {arraySurah.data.ayat.map((ayat) => {
+      {arraySurah.data.ayat.map((ayat, index) => {
         return (
-          <div
+          <div 
+            key={index}
             className={`rounded-xl border-2 border-cyan-700 p-4`}
           >
             <p className="text-2xl border-r-2 w-fit pr-2 border-emerald-700">

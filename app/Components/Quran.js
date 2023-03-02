@@ -13,8 +13,9 @@ export default async function Quran() {
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-2 gap-4">
       {surahs.data.map((surah) => (
-        <Link href={`/surah/${surah.nomor}/`}>
+        <Link key={surah.nomor} href={`/surah/${surah.nomor}/`}>
           <div
+            
             className={`grid grid-cols-3 items-center rounded-xl border-2 border-cyan-700 p-2 cursor-pointer`}
           >
             <p className="text-2xl border-r-2 w-fit pr-2 border-emerald-700">
