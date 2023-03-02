@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 export default async function Quran() {
+  
   const getSurah = async () => {
     const res = await fetch("https://equran.id/api/v2/surat");
     const surahs = await res.json();
