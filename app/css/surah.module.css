@@ -1,0 +1,6 @@
+.active{
+    height: 150px;
+    overflow-y: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}

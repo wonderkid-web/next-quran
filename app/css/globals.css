@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "LPMQ Isep Misbah"; src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot"); src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff") format("woff"), url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.svg#LPMQ Isep Misbah") format("svg");
+}
+
+:root{
+    --arabicFont: "LPMQ Isep Misbah";
+}
+
+
+.arabic{
+    font-family: var(--arabicFont);
+}
