@@ -14,7 +14,7 @@ export default async function Quran() {
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-2 gap-4">
       {surahs.data.map((surah) => (
-        <Link key={surah.nomor} href={`/surah/${surah.nomor}/`}>
+        <Link key={surah.nomor} href={`/surah/${surah.namaLatin}/`}>
           <div
             
             className={`grid grid-cols-3 items-center rounded-xl border-2 border-cyan-700 p-2 cursor-pointer`}
@@ -22,7 +22,7 @@ export default async function Quran() {
             <p className="text-2xl border-r-2 w-fit pr-2 border-emerald-700">
               {surah.nomor}
             </p>
-            <p className="">{surah.namaLatin}</p>
+            <p className="">{surah.namaLatin} - {surah.jumlahAyat}</p>
             <p className="w-fit justify-self-end bg-emerald-700 p-2 rounded-md text-white">
               {surah.tempatTurun}
             </p>

@@ -1,8 +1,7 @@
 import Nav from './Components/Nav'
 import './css/globals.css'
 
-export default function RootLayout({ children, params }) {
-  console.log(params)
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       {/*

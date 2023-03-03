@@ -14,3 +14,7 @@
 .arabic{
     font-family: var(--arabicFont);
 }
+
+.space{
+    white-space: pre-line;
+}
