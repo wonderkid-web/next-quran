@@ -21,7 +21,10 @@ export default async function Tafsir({ params }) {
   return (
     <div>
       {singleTafsirAyat.map((tafsir) => (
-        <div key={params.slugTafsir} className="rounded-md w-5/6 md: w-2/4 lg:w-1/2 text-center mx-auto mb-5">
+        <div
+          key={params.slugTafsir}
+          className="rounded-md w-5/6 md: w-2/4 lg:w-1/2 text-center mx-auto mb-5"
+        >
           <h1 className="font-semibold cursor-pointer text-lg text-center bg-emerald-700 my-5 text-white rounded-md inline-block p-3">
             Tafsir {params.slugSurah} ayat {params.slugTafsir}
           </h1>
