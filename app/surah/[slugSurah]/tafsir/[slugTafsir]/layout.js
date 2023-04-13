@@ -1,4 +1,4 @@
-export default async function RootLayout({ children, params }) {
+export default async function RootLayout({ children }) {
   // const getSurahName = async (namaSurah) => {
   //   const res = await fetch("https://equran.id/api/v2/surat");
   //   const surahs = await res.json();

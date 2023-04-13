@@ -16,10 +16,10 @@ export default async function Surah({ params }) {
       const raw = await fetch(`https://equran.id/api/v2/surat/${currentSurah}`);
       const res = await raw.json();
       const nextNamaSurah = res.data.suratSelanjutnya.namaLatin;
-      const nextUrl = `http://localhost:3000/surah/${nextNamaSurah}`;
+      const nextUrl = `https://next-quran-seven.vercel.app/surah/${nextNamaSurah}`;
       return nextUrl;
     } else {
-      const nextUrl = `http://localhost:3000/surah/Al-Fatihah`;
+      const nextUrl = `https://next-quran-seven.vercel.app/surah/Al-Fatihah`;
       return nextUrl;
     }
   };
@@ -28,10 +28,10 @@ export default async function Surah({ params }) {
       const raw = await fetch(`https://equran.id/api/v2/surat/${currentSurah}`);
       const res = await raw.json();
       const nextNamaSurah = res.data.suratSebelumnya.namaLatin;
-      const nextUrl = `http://localhost:3000/surah/${nextNamaSurah}`;
+      const nextUrl = `https://next-quran-seven.vercel.app/surah/${nextNamaSurah}`;
       return nextUrl;
     } else {
-      const nextUrl = `http://localhost:3000/surah/An-Nas`;
+      const nextUrl = `https://next-quran-seven.vercel.app/surah/An-Nas`;
       return nextUrl;
     }
   };
@@ -55,6 +55,7 @@ export default async function Surah({ params }) {
       {arraySurah.data.ayat.map((ayat, index) => {
         return (
           <div
+            id={ayat.nomorAyat}
             key={index}
             className={`rounded-xl border-2 border-cyan-700 p-4`}
           >
@@ -79,14 +80,14 @@ export default async function Surah({ params }) {
 
       <Link
         href={prevSurah}
-        className="text-3xl p-2 fixed left-5 bottom-4 cursor-pointer rounded-md bg-emerald-500"
+        className=" text-2xl md:text-3xl p-2 fixed left-5 bottom-4 cursor-pointer rounded-md bg-emerald-500"
       >
         ⏮
       </Link>
 
       <Link
         href={nextSurah}
-        className="text-3xl p-2 fixed right-5 bottom-4 cursor-pointer rounded-md bg-emerald-500"
+        className=" text-2xl md:text-3xl p-2 fixed right-5 bottom-4 cursor-pointer rounded-md bg-emerald-500"
       >
         ⏭
       </Link>

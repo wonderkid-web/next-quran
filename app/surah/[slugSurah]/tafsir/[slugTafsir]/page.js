@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default async function Tafsir({ params }) {
   const detectNomorSurah = async (namaSurah) => {
     const res = await fetch(`https://equran.id/api/v2/surat`);
@@ -34,6 +36,12 @@ export default async function Tafsir({ params }) {
           />
         </div>
       ))}
+      <Link
+        className="text-4xl lg:text-6xl fixed bottom-4 right-4"
+        href={`https://next-quran-seven.vercel.app/surah/${params.slugSurah}#${params.slugTafsir}`}
+      >
+        🔙
+      </Link>
     </div>
   );
 }
